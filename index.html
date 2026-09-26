@@ -879,7 +879,10 @@
       currRate = rate; currSymbol = symbol;
       document.querySelectorAll('.currency-btn').forEach(b => b.classList.remove('active'));
       el.classList.add('active');
-      renderAllGrids(); updateCartUI(); renderOrderHistory();
+      renderAllGrids(); 
+      updateCartUI(); 
+      renderOrderHistory();
+      renderFavorites();
     }
 
     function formatPrice(p) { return `${Math.round(p * currRate).toLocaleString()} ${currSymbol}`; }
